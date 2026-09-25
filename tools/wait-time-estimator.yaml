@@ -1,0 +1,21 @@
+name: wait-time-estimator
+description: Calculate predictive estimated wait time for a given queue position.
+input_schema:
+  type: object
+  properties:
+    queue_id:
+      type: string
+      description: Facility or department queue identifier.
+    queue_position:
+      type: integer
+      description: Current 1-indexed position of the token in queue.
+    active_counters:
+      type: integer
+      description: Number of currently operating service counters.
+    avg_service_time_sec:
+      type: integer
+      description: Moving average service duration per ticket in seconds.
+  required:
+    - queue_id
+    - queue_position
+    - active_counters

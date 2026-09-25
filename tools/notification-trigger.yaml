@@ -1,0 +1,24 @@
+name: notification-trigger
+description: Broadcast real-time queue position alerts and counter calls to users.
+input_schema:
+  type: object
+  properties:
+    token_id:
+      type: string
+      description: Alphanumeric token code receiving the alert.
+    channel:
+      type: string
+      enum: [websocket, whatsapp, telegram, email, display_kiosk]
+      description: Delivery medium for the alert message.
+    alert_type:
+      type: string
+      enum: [position_update, proximity_warning, counter_call, grace_period_warning, service_completed]
+      description: Operational category of the notification.
+    message:
+      type: string
+      description: Human-readable notification payload.
+  required:
+    - token_id
+    - channel
+    - alert_type
+    - message

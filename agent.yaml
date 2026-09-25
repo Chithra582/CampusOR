@@ -1,0 +1,64 @@
+spec_version: "0.1.0"
+name: "campusor-agent"
+version: "1.0.0"
+description: >
+  Autonomous campus virtual queue orchestration and predictive dispatch agent for CampusOR.
+  Manages dynamic token routing, multi-counter load balancing, wait-time machine learning
+  predictions, and proactive notification triggers across campus facilities.
+author: "Chithra R"
+license: "MIT"
+
+model:
+  preferred: "gemini-2.0-flash"
+  fallback:
+    - "gpt-4o"
+    - "claude-3-5-sonnet"
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+
+skills:
+  - virtual-token-orchestrator
+  - counter-load-balancer
+  - wait-time-predictor
+  - smart-notification-dispatcher
+
+tools:
+  - token-manager
+  - counter-dispatcher
+  - wait-time-estimator
+  - notification-trigger
+
+runtime:
+  max_turns: 10
+  temperature: 0.2
+  timeout: 120
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - ferpa
+    - gdpr
+  data_governance:
+    pii_handling: redact
+    data_classification: internal
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - productivity
+  - queue-management
+  - campus-operations
+  - virtual-queues
+  - predictive-analytics
+  - dispatching
+  - smart-campus
+
+metadata:
+  domain: "productivity"
+  category: "Productivity"

@@ -1,6 +1,11 @@
 # CampusOR  
 **Campus Online Queue & Reservation System**
 
+[![OpenGAP Spec 0.1.0](https://img.shields.io/badge/OpenGAP-0.1.0-blue.svg)](https://opengitagent.org)
+[![GitAgent Passport](https://img.shields.io/badge/GitAgent%20Passport-Ready-brightgreen.svg)](https://app.hidevs.xyz/passport/submit)
+[![Category](https://img.shields.io/badge/Category-Productivity-teal.svg)](https://app.hidevs.xyz/passport/submit)
+[![Compliance](https://img.shields.io/badge/Compliance-FERPA%20%7C%20GDPR-orange.svg)](EXPLAINABILITY.md)
+
 CampusOR is a smart, scalable virtual queue and reservation system for large campuses such as universities, hospitals, hostels, cafeterias, and administrative offices. It replaces physical queues with a real-time digital experience, reducing congestion and improving service efficiency.
 
 ---
@@ -120,4 +125,16 @@ campusor/
 ├── shared/          # shared types & schemas
 ├── infra/           # Docker & deployment
 └── docs/            # architecture & API docs
+```
+
+---
+
+## GitAgent Passport Qualification
+
+This repository is fully compliant with the **OpenGAP Spec 0.1.0** standard and qualified for the **HiDevs GitAgent Passport**:
+
+- **Checkpoint 1 (Validate):** Verified OpenGAP spec 0.1.0 compliance via [`agent.yaml`](agent.yaml), [`SOUL.md`](SOUL.md), [`skills/`](skills/), and [`tools/`](tools/).
+- **Checkpoint 2 (Explain):** Comprehensive 5-section transparency report in [`EXPLAINABILITY.md`](EXPLAINABILITY.md) detailing virtual queue dispatch logic, ML wait-time regression models, FERPA/GDPR compliance, and failure mode mitigations.
+- **Checkpoint 3 (Export):** Cross-framework export compatibility tested across OpenAI SDK, CrewAI, Claude Code, and Lyzr.
+- **Target Category:** **`Productivity`** (Campus Queue Management & Operations).
 

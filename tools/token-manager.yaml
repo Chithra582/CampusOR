@@ -1,0 +1,21 @@
+name: token-manager
+description: Issue, verify QR codes, and update lifecycle states for virtual queue tokens.
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum: [issue, verify, call, serve, complete, skip, recall, cancel]
+      description: Lifecycle action to execute on the queue token.
+    queue_id:
+      type: string
+      description: Identifier for the specific campus department or facility queue.
+    token_id:
+      type: string
+      description: Unique identifier of the token being manipulated.
+    user_id:
+      type: string
+      description: Student or visitor identifier requesting the action.
+  required:
+    - action
+    - queue_id
